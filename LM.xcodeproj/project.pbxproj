@@ -30,19 +30,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F8DE31142D229F7D0032311F /* LM */ = {
+		F8DE31402D229FD60032311F /* LM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LM;
 			sourceTree = "<group>";
 		};
-		F8DE31262D229F7E0032311F /* LMTests */ = {
+		F8DE31542D22A18A0032311F /* LMTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LMTests;
-			sourceTree = "<group>";
-		};
-		F8DE31302D229F7E0032311F /* LMUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LMUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +70,8 @@
 		F8DE31092D229F7D0032311F = {
 			isa = PBXGroup;
 			children = (
-				F8DE31142D229F7D0032311F /* LM */,
-				F8DE31262D229F7E0032311F /* LMTests */,
-				F8DE31302D229F7E0032311F /* LMUITests */,
+				F8DE31542D22A18A0032311F /* LMTests */,
+				F8DE31402D229FD60032311F /* LM */,
 				F8DE31132D229F7D0032311F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,9 +101,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				F8DE31142D229F7D0032311F /* LM */,
-			);
 			name = LM;
 			packageProductDependencies = (
 			);
@@ -130,9 +121,6 @@
 			dependencies = (
 				F8DE31252D229F7E0032311F /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				F8DE31262D229F7E0032311F /* LMTests */,
-			);
 			name = LMTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +140,6 @@
 			);
 			dependencies = (
 				F8DE312F2D229F7E0032311F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F8DE31302D229F7E0032311F /* LMUITests */,
 			);
 			name = LMUITests;
 			packageProductDependencies = (
