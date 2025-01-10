@@ -11,8 +11,8 @@ class MenuBuilder {
     private let launchAtLoginManager: LaunchAtLoginManager
     private let lidStateMonitor: LidStateMonitor
     
-    init(laucnAtLoginManager: LaunchAtLoginManager, lidStateMonitor: LidStateMonitor) {
-        self.launchAtLoginManager = laucnAtLoginManager
+    init(launchAtLoginManager: LaunchAtLoginManager, lidStateMonitor: LidStateMonitor) {
+        self.launchAtLoginManager = launchAtLoginManager
         self.lidStateMonitor = lidStateMonitor
     }
     

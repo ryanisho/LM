@@ -14,9 +14,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var audioController: AudioController!
     private var launchAtLoginManager: LaunchAtLoginManager!
     
-    func applicationDidFinishLaunching(_, aNotification: Notification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupServices()
         registerForSleepNotifications()
+        print("Application finished launching...")
     }
     
     private func setupServices() {

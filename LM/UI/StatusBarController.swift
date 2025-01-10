@@ -29,7 +29,7 @@ class StatusBarController {
     func updateIcon(muted: Bool) {
         if let button = statusItem.button {
             let imageName = muted ? "speaker.slash.circle.fill" : "speaker.circle.fill"
-            button.image = NSImage(symbolName: imageName, accessibilityDescription: "LidMute")
+            button.image = NSImage(systemSymbolName: imageName, accessibilityDescription: "LidMute")
         }
     }
 }

@@ -14,9 +14,9 @@ class LidStateMonitor {
     var stateChanged: ((Bool) -> Void)?
     
     func startMonitoring() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, repeats: true) {
-            [weak self] _ in self?.checkListState()
-        }
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
+            self?.checkLidState()
+        })
     }
     
     func stopMonitoring() {

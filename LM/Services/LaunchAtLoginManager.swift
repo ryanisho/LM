@@ -20,9 +20,9 @@ class LaunchAtLoginManager {
     }
     
     private func setLaunchAtLogin(_ enabled: Bool) {
-        if #avaliable(macOS 13, *) {
+        if #available(macOS 13, *) {
             do {
-                if enable {
+                if enabled {
                     try SMAppService.mainApp.register()
                 } else {
                     try SMAppService.mainApp.unregister()

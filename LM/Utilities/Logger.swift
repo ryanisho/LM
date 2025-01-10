@@ -8,5 +8,9 @@
 import os.log
 
 struct Logger {
-    private static let logger = OSLog(__subsystem: <#T##Int8#>, category: <#T##Int8#>)
+    private static let logger = OSLog(subsystem: AppConstants.bundleIdentifier, category: "LM")
+    
+    static func log(_ message: String) {
+        os_log("%{public}@", log: logger, type: .default, message)
+    }
 }

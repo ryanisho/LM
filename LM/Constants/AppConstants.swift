@@ -6,7 +6,7 @@
 //
 
 struct AppConstants {
-    static let bundleIdentifier = "com.LM.LidMute"
+    static let bundleIdentifier = "com.lm.LM"
     static let appName = "LM"
     static let version = "1.0"
 }

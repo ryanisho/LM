@@ -8,7 +8,7 @@
 import Foundation
 
 class AudioController {
-    func setMuted(_muted: Bool) {
+    func setMuted(_ muted: Bool) {
         let script = "set volume \(muted ? "with" : "without") output muted"
         _ = ProcessExecutor.execute(command: "/usr/bin/osascript", arguments: ["-e", script])
         Logger.log("Audio \(muted ? "muted" : "unmuted")")
