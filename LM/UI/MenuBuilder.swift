@@ -31,6 +31,46 @@ class MenuBuilder {
         menu.addItem(toggleItem)
         
         // launch at login option
+        let launchAtLoginItem = NSMenuItem (
+            title: "Launch at Login",
+            action: #selector(MenuBuilder.toggleLaunchAtLogin(_:)),
+            keyEquivalent: ""
+        )
         
+        launchAtLoginItem.target = self
+        launchAtLoginItem.state = launchAtLoginManager.isEnabled ? .on : .off
+        menu.addItem(launchAtLoginItem)
+        
+        menu.addItem(NSMenuItem.separator())
+        
+        // about item
+        menu.addItem(NSMenuItem(
+            title: "About LidMute",
+            action: #selector(MenuBuilder.showAbout(_:)),
+            keyEquivalent: ""
+        ))
+        
+        // quit item
+        menu.addItem(NSMenuItem(
+            title: "Quit",
+            action: #selector(NSApplication.terminate(_:)),
+            keyEquivalent: "q"
+        ))
+        
+        return menu
+    }
+    
+    @objc private func toggleEnabled(_ sender: NSMenuItem) {
+        lidStateMonitor.toggleEnabled()
+        sender.state = lidStateMonitor.isEnabled ? .on : .off
+    }
+    
+    @objc private func toggleLaunchAtLogin(_ sender: NSMenuItem) {
+        launchAtLoginManager.isEnabled.toggle()
+        sender.state = launchAtLoginManager.isEnabled ? .on : .off
+    }
+    
+    @objc private func showAbout(_ sender: Any) {
+        NSApp.orderFrontStandardAboutPanel(sender)
     }
 }
