@@ -6,3 +6,7 @@
 //
 
 import os.log
+
+struct Logger {
+    private static let logger = OSLog(__subsystem: <#T##Int8#>, category: <#T##Int8#>)
+}
